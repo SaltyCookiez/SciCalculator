@@ -4,6 +4,8 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using SciCalculator.Views;
+
 namespace SciCalculator;
 
 public partial class App : Application
@@ -14,6 +16,7 @@ public partial class App : Application
     public App()
     {
         InitializeComponent();
+
 
 #if WINDOWS
 		Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
@@ -27,7 +30,6 @@ public partial class App : Application
 			appWindow.Resize(new SizeInt32(WindowWidth, WindowHeight));
 		});
 #endif
-
-        MainPage = new AppShell();
+		MainPage = new CalculaterPage();
     }
 }
