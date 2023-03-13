@@ -1,4 +1,7 @@
-﻿namespace SciCalculator;
+﻿using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
+
+namespace SciCalculator;
 
 public static class MauiProgram
 {

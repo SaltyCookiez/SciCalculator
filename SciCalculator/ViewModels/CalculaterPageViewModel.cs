@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System;
 using Expression = NCalc.Expression;
+using System.Collections.Generic;
 
 namespace SciCalculater.ViewModels
 {

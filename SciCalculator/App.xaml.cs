@@ -4,7 +4,9 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
-using SciCalculator.Views;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using System;
 
 namespace SciCalculator;
 
@@ -30,6 +32,7 @@ public partial class App : Application
 			appWindow.Resize(new SizeInt32(WindowWidth, WindowHeight));
 		});
 #endif
+
 		MainPage = new CalculaterPage();
     }
 }
