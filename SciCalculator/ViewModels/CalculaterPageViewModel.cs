@@ -56,7 +56,7 @@ namespace SciCalculater.ViewModels
 
                 CalculatedResult = result.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 CalculatedResult = "NaN";
