@@ -2,6 +2,8 @@
 using CommunityToolkit.Mvvm.Input;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using System;
+using Expression = NCalc.Expression;
 
 namespace SciCalculater.ViewModels
 {
@@ -48,11 +50,15 @@ namespace SciCalculater.ViewModels
             try
             {
                 var inputString = NormalizeInputString();
+                var expression = new Expression(inputString);
+                var result = expression.Evaluate();
+
+                CalculatedResult = result.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                CalculatedResult = "NaN";
             }
         }
 
