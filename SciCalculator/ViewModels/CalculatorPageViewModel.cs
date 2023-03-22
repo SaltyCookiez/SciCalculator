@@ -1,15 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System.ComponentModel;
-using System.Linq.Expressions;
-using System;
-using Expression = NCalc.Expression;
+﻿
 using System.Collections.Generic;
 
-namespace SciCalculater.ViewModels
+namespace SciCalculator.ViewModels
 {
     [INotifyPropertyChanged]
-    internal partial class CalculaterPageViewModel //: ObservableObject, INotifyPropertyChanged
+    internal partial class CalculatorPageViewModel //: ObservableObject, INotifyPropertyChanged
     {
         //public event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,7 +16,7 @@ namespace SciCalculater.ViewModels
 
         private bool isSciOpWaiting = false;
 
-        public CalculaterPageViewModel()
+        public CalculatorPageViewModel()
         {
 
         }
@@ -56,9 +51,8 @@ namespace SciCalculater.ViewModels
 
                 CalculatedResult = result.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 CalculatedResult = "NaN";
             }
         }

@@ -33,6 +33,6 @@ public partial class App : Application
 		});
 #endif
 
-		MainPage = new CalculaterPage();
+		MainPage = new CalculatorPage();
     }
 }
